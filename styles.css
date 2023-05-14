@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", Arial, sans-serif;
+  }
+  
+  nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .download-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
+  .hero-image .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hero-image .slide.active {
+    opacity: 1;
+  }
+  .carousel {
+    /* Estilos para el carrusel */
+    
+  }
+  
+  .movie-list {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+  }
+  
+  .movie-list::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento horizontal */
+  }
+  
+  .movie-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+  }
